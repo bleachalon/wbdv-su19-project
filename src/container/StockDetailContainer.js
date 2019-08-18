@@ -201,6 +201,7 @@ class StockDetailContainer extends Component {
                     <Button fullWidth
                             size={"large"}
                             variant="outlined"
+                            onClick={() => this.addProductForUser(this.state.urlKey, this.state.uid)}
                             color="inherit">Add
                         Review</Button></Link>}
                 {this.renderRedirectLogin()}
