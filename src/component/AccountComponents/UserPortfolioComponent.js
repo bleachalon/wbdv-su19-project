@@ -97,7 +97,7 @@ class UserPortfolioComponent extends Component {
                         <TableBody>
                             {this.state.portfolioItems.map((row, i) => (
                                 <TableRow key={`row-${i}`}>
-                              {this.id == this.props.match.params.uid && <TableCell align="center"> <Button
+                              {this.id == this.props.uid && <TableCell align="center"> <Button
                                         onClick={() => this.deleteItem(i)}
                                         color="secondary"
                                     >
