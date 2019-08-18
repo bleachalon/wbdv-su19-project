@@ -32,7 +32,7 @@ class UserPortfolioComponent extends Component {
 
     constructor(props) {
         super(props);
-        this.id = JSON.parse(localStorage.getItem(Cookies.get("JSESSIONID")))? JSON.parse(localStorage.getItem(Cookies.get("JSESSIONID"))).uid :0
+       
         this.state = {
             portfolioItems: this.props.portfolio.portfolioItems,
             totalItem: this.props.portfolio.totalItem,
