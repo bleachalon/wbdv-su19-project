@@ -32,6 +32,7 @@ class UserPortfolioComponent extends Component {
 
     constructor(props) {
         super(props);
+        this.id = JSON.parse(localStorage.getItem(Cookies.get("JSESSIONID")))? JSON.parse(localStorage.getItem(Cookies.get("JSESSIONID"))).uid :0
         this.state = {
             portfolioItems: this.props.portfolio.portfolioItems,
             totalItem: this.props.portfolio.totalItem,
@@ -96,12 +97,12 @@ class UserPortfolioComponent extends Component {
                         <TableBody>
                             {this.state.portfolioItems.map((row, i) => (
                                 <TableRow key={`row-${i}`}>
-                                    <TableCell align="center"> <Button
+                              {this.id == this.props.match.params.uid && <TableCell align="center"> <Button
                                         onClick={() => this.deleteItem(i)}
                                         color="secondary"
                                     >
                                         Delete
-                                    </Button></TableCell>
+                                    </Button></TableCell>}
                                     <TableCell component="th" scope="row">
                                         <img className={classes.image} src={row.imageUrl} alt="Logo"/>
                                         <span>{row.name}</span>
