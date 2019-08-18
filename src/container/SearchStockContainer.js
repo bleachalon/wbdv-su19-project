@@ -50,11 +50,11 @@ class SearchStockContainer extends Component {
                                onChange={this.keywordChange}
                                placeholder="keyword"/>
                         <div className="input-group-append">
-                            <button
+                            <Link to={`/search/${this.state.keywords}`}><button
                                 onClick={this.searchStock}
                                 className="btn btn-primary">
                                 Search
-                            </button>
+                            </button></Link>
                         </div>
                     </div>
                 </div>
