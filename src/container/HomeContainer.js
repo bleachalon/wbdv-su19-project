@@ -165,7 +165,7 @@ class HomeContainer extends Component {
 
                     {this.getEditorComp()}
 
-                    {localStorage.getItem(Cookies.get("JSESSIONID")) != null && this.state.userProducts != null &&
+                    {localStorage.getItem(Cookies.get("JSESSIONID")) != null && this.state.userProducts.length > 0 &&
                     <Container maxWidth="md">
                         <h3>MY COLLECTION</h3>
                         <UserProductComponent userProducts={this.state.userProducts}/>
