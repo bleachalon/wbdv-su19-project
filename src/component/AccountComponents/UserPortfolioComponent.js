@@ -98,12 +98,12 @@ class UserPortfolioComponent extends Component {
                         <TableBody>
                             {this.state.portfolioItems.map((row, i) => (
                                 <TableRow key={`row-${i}`}>
-                                    {this.id == this.props.uid && <TableCell align="center"> <Button
+                                     <TableCell align="center"> {this.id == this.props.uid &&<Button
                                         onClick={() => this.deleteItem(i)}
                                         color="secondary"
                                     >
                                         Delete
-                                    </Button></TableCell>}
+                                    </Button>} </TableCell>
                                     <TableCell component="th" scope="row">
                                         <img className={classes.image} src={row.imageUrl} alt="Logo"/>
                                         <span>{row.name}</span>
